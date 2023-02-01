@@ -39,7 +39,7 @@ console.log(zeroOne);
 // ```
 // Создайте два массива, в один поместите все положительные числа включая 0, в другой все отрицательные. Оба массива затем выведите в консоль.
 
-const mixedNumbers = [-14, 24, -89, 43, 0 , -1, 412, 4];
+const mixedNumbers = [-14, 24, -89, 43, 0, -1, 412, 4];
 const positiveNumbers = mixedNumbers.filter(num => num >= 0);
 const negativeNumbers = mixedNumbers.filter(num => num < 0);
 console.log(`Положительные числа:`, positiveNumbers);
@@ -57,3 +57,30 @@ for (let i = 0; i < 5; i++) {
 console.log(randomArray);
 const tripleNumbers = randomArray.map(item => item ** 3);
 console.log(randomArray, tripleNumbers);
+
+// Деструктуризация объектов
+// const person = {
+//     age: 23,
+//     name: 'Dima',
+//     sity: 'Minsk'
+// };
+// const {name , age,} = person;
+// console.log(age, name,);
+
+// function palindrom() {
+//     const str = prompt('Введите слово для проверки')
+//     if (str.split('').reverse().join('') == str) {
+//         console.log('Это палиндром');
+//     } else {
+//         console.log('Это не палиндром');
+//     }
+// }
+// palindrom();
+
+
+function palindrome() {
+    const word = prompt();
+    const wordCheck = word.split('').reverse().join('');
+    return word === wordCheck;
+}
+console.log(palindrome());
