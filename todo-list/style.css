@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.delete-button {
+    background-color: aqua;
+    border: 3px solid black;
+    outline: none;
+    max-width: 175px;
+    width: 100%;
+    height: 85px;
+    border-radius: 8px;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.input-to-do {
+    outline: none;
+    border: 3px solid black;
+    max-width: 300px;
+    width: 100%;
+    height: 85px;
+    text-align: center;
+    font-size: 26px;
+    border-radius: 8px;
+}
+
+.add-button {
+    background-color: aqua;
+    border: 3px solid black;
+    outline: none;
+    max-width: 175px;
+    width: 100%;
+    height: 85px;
+    border-radius: 8px;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.header-div {
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 65px;
+    max-width: 785px;
+    width: 100%;
+}
+
+.first-main-div {
+    margin: 0 auto;
+    margin-top: 70px;
+    max-width: 785px;
+    width: 100%;
+    min-height: 185px;
+    border: 3px solid black;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.second-main-div {
+    margin: 0 auto;
+    margin-top: 50px;
+    max-width: 785px;
+    width: 100%;
+    min-height: 185px;
+    border: 3px solid black;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.ok-button {
+    max-width: 70px;
+    width: 100%;
+    min-height: 50px;
+    background-color: aqua;
+    border: 3px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    left: 40px;
+}
+
+.no-button {
+    max-width: 70px;
+    width: 100%;
+    min-height: 50px;
+    background-color: aqua;
+    border: 3px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    top: 20px;
+    right: 20px;
+}
+
+.first-main-div > button {
+    position: absolute;
+}
+
+.to-do-input {
+    border: none;
+    outline: none;
+    max-width: 500px;
+    width: 100%;
+    min-height: 85px;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 5px;
+    left: 120px;
+}
+
+.date-input {
+    max-width: 135px;
+    width: 100%;
+    min-height: 50px;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 5px;
+    top: 100px;
+    right: 10px;
+}
+
+.first-main-div > input {
+    position: absolute;
+}
+
+.second-main-div > button {
+    position: absolute;
+}
+
+.second-main-div > input {
+    position: absolute;
+}
