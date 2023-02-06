@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#todo-app {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  li {
+    list-style: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .completed {
+    background-color: lightgreen;
+    text-decoration: line-through;
+  }
+  
+  .task-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+  }
+  
+  input[type="text"] {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+  }

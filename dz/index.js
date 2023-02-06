@@ -129,7 +129,7 @@
 // Выведите в консоль его последний элемент вне зависимости от его длинны.
 
 // const animals = ['monkey', 'dog', 'cat']
-// const animals2 = animals.pop();
+// const animals2 = animals.pop() ; // animals[animals.length-1]
 // console.log(animals2);
 
 
@@ -172,3 +172,74 @@
 //     return students;
 // } 
 // console.log(poped());
+// const taskInput = document.getElementById("task-input");
+// const addTaskBtn = document.getElementById("add-task-btn");
+// const deleteAllBtn = document.getElementById("delete-all-btn");
+// const taskList = document.getElementById("task-list");
+
+// addTaskBtn.addEventListener("click", function() {
+//   const task = taskInput.value;
+//   const taskItem = document.createElement("li");
+//   taskItem.innerHTML = task;
+  
+//   taskItem.addEventListener("click", function() {
+//     this.classList.toggle("completed");
+//   });
+  
+//   taskList.appendChild(taskItem);
+// });
+
+// deleteAllBtn.addEventListener("click", function() {
+//   taskList.innerHTML = "";
+// });
+const taskInput = document.querySelector("#task-input");
+const addTaskBtn = document.querySelector("#add-task-btn");
+const taskList = document.querySelector("#task-list");
+const clearAllBtn = document.querySelector("#delete-all-btn");
+
+addTaskBtn.addEventListener("click", function() {
+  const taskValue = taskInput.value;
+  if (!taskValue) return;
+
+  const taskDate = new Date().toLocaleString();
+
+  const taskItem = document.createElement("li");
+  taskItem.classList.add("task-item");
+  taskItem.innerHTML = `
+    <span class="task-title">${taskValue}</span>
+    <span class="task-date">Added on: ${taskDate}</span>
+    <div class="task-buttons">
+      <button class="edit-task-btn">Edit</button>
+      <button class="complete-task-btn">Complete</button>
+      <button class="delete-task-btn">Delete</button>
+    </div>
+  `;
+
+  const editTaskBtn = taskItem.querySelector(".edit-task-btn");
+  const completeTaskBtn = taskItem.querySelector(".complete-task-btn");
+  const deleteTaskBtn = taskItem.querySelector(".delete-task-btn");
+
+  editTaskBtn.addEventListener("click", function() {
+    const taskTitle = taskItem.querySelector(".task-title");
+    const editValue = prompt("Enter new task", taskTitle.textContent);
+    if (!editValue) return;
+    taskTitle.textContent = editValue;
+  });
+
+  completeTaskBtn.addEventListener("click", function() {
+    taskItem.classList.toggle("completed");
+  });
+
+  deleteTaskBtn.addEventListener("click", function() {
+    taskList.removeChild(taskItem);
+  });
+
+  taskList.appendChild(taskItem);
+  taskInput.value = "";
+  });
+  
+  clearAllBtn.addEventListener("click", function() {
+  taskList.innerHTML = "";
+  });
+
+
